@@ -26,7 +26,7 @@ install: true
 before_script:
   - chmod +x gradlew
 script:
-  - "./gradlew clean build"
+  - gradle clean build
 
 deploy:
   provider: releases
