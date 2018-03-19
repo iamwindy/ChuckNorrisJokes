@@ -16,8 +16,6 @@ android:
 before_install:
   - yes | sdkmanager "platforms;android-27"
 
-script: ./gradlew :app:build
-  
 deploy:
   provider: releases
   apikey: $GITHUB_KEY
