@@ -8,7 +8,7 @@ android:
     - extra
     - platform-tools
     - tools
-    - extra-google-google_play_services
+    - extra-google-googleplayservices
     - extra-google-m2repository
     - extra-android-m2repository
     - addon-google_apis-google-19
@@ -19,13 +19,12 @@ env:
     # Add this
     - MALLOC_ARENA_MAX=2
 
-sudo: required
 
 before_install:
   - yes | sdkmanager "platforms;android-27"
+  MOBILSZOFTVER LABOR – TRAVIS CI 4 / 6
+  Copyright © 2018. Ekler Péter, Forstner Bertalan, Balogh Tamás, Automatizálási és Alkalmazott Informatikai Tanszék
 
-script:
- - chmod +x ./gradlew build connectedCheck
 
 deploy:
   provider: releases
@@ -39,4 +38,6 @@ notifications:
   email:
     recipients:
     - heshenghai94@gmail.com
+    on_success: always
     on_failure: always
+
