@@ -21,6 +21,12 @@ env:
 
 sudo: required
 
+before_install:
+  - yes | sdkmanager "platforms;android-27"
+
+script:
+ - chmod +x ./gradlew build connectedCheck
+
 deploy:
   provider: releases
   api_key: $GITHUB_KEY
