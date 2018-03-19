@@ -23,7 +23,8 @@ jdk:
   - oraclejdk8
 
 install: true
-script: ./gradlew :app:build
+script:
+  - "/.gradlew clean build"
 before_script:
   - chmod +x gradlew
 deploy:
