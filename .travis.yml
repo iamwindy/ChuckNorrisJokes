@@ -19,7 +19,7 @@ before_install:
   - chmod +x gradlew
 
 script: 
-  ./gradlew :app:build
+  ./gradlew build
 
 notifications:
   email:
